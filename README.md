@@ -60,17 +60,45 @@ python3 nexthour_cli.py down
 
 The session and sing-box live under `~/.config/nexthour/`.
 
-## Free India gateways (measured 2026-10)
+## Free gateways (snapshot 2026-10, all configs verified 200)
+
+`servers.json` carries the full free-tier snapshot (20 gateways, 10 countries).
+Every entry below is a free-tier config; `up <id>` works for any of them.
+
+| id | protocol | country | location | host | config |
+|----|----------|---------|----------|------|--------|
+| 277 | v2ray/vless | BGMI | Server 2 | 148.113.6.149 | ok |
+| 275 | wireguard/wg | BGMI | Server 1 | — | ok |
+| 263 | v2ray/vless | Canada | Toronto | 216.152.147.231 | ok |
+| 266 | wireguard/wg | Canada | Toronto | — | ok |
+| 255 | v2ray/vless | France | Paris | 167.17.64.29 | ok |
+| 258 | wireguard/wg | France | Paris | — | ok |
+| 261 | v2ray/vless | Germany | Frankfurt am Main | 170.101.111.202 | ok |
+| 262 | wireguard/wg | Germany | Frankfurt am Main | — | ok |
+| 281 | v2ray/vless | India | Marseille | 13.140.74.244 | ok |
+| 282 | wireguard/wg | India | Marseille | — | ok |
+| 256 | v2ray/vless | Netherlands | Amsterdam | 167.17.70.39 | ok |
+| 259 | wireguard/wg | Netherlands | Amsterdam | — | ok |
+| 252 | v2ray/vless | Singapore | Singapore | 172.104.33.120 | ok |
+| 254 | wireguard/wg | Singapore | Singapore | — | ok |
+| 279 | v2ray/vless | Spain | Madrid | 167.17.71.193 | ok |
+| 280 | wireguard/wg | Spain | Barcelona | — | ok |
+| 257 | v2ray/vless | United Kingdom | London | 136.176.68.58 | ok |
+| 260 | wireguard/wg | United Kingdom | London | — | ok |
+| 264 | v2ray/vless | United States | Los Angeles | 216.152.152.125 | ok |
+| 278 | wireguard/wg | United States | Los Angeles | — | ok |
+
+India specifics (measured):
 
 | id | protocol | host | RTT | tunnel exit | notes |
 |----|----------|------|-----|-------------|-------|
-| 281 | vless + reality | 13.140.74.244:443 | ~74 ms | India | works; ~0.3 MB/s free tier |
-| 282 | wireguard | 13.140.74.243:51820 | ~126 ms | — | peer mint works; handshake flaky from this host |
+| 281 | vless + reality | 13.140.74.244 | ~74 ms | India | works; ~0.3 MB/s free tier |
+| 282 | wireguard | 13.140.74.243 | ~126 ms | — | peer mint works; handshake flaky from this host |
 | 251 | vless (premium) | Mumbai (Akamai) | — | — | `premium_required` |
 | 253 | wireguard (premium) | Mumbai (Akamai) | — | — | `premium_required` |
 
-Government endpoints through the free tunnel: `impds.nic.in` 200 (~4.5 s),
-`nfsa.gov.in` 200 (~8 s), ONORC (UMANG) gateway reachable.
+Government endpoints through the free India tunnel: `impds.nic.in` 200
+(~4.5 s), `nfsa.gov.in` 200 (~8 s), ONORC (UMANG) gateway reachable.
 
 ## Layout
 
