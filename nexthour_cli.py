@@ -286,7 +286,7 @@ def main():
     sub.add_parser("register").set_defaults(fn=cmd_register)
     p = sub.add_parser("servers"); p.add_argument("--filter"); p.set_defaults(fn=cmd_servers)
     p = sub.add_parser("config"); p.add_argument("server_id", type=int); p.set_defaults(fn=cmd_config)
-    p = sub.add_parser("up"); p.add_argument("server_id", type=int); p.add_argument("--port", type=int, default=2080); p.set_defaults(fn=cmd_up)
+    p = sub.add_parser("up"); p.add_argument("server_id", type=int, nargs="?", default=281); p.add_argument("--port", type=int, default=2080); p.set_defaults(fn=cmd_up)
     sub.add_parser("down").set_defaults(fn=cmd_down)
     p = sub.add_parser("wireguard"); p.add_argument("server_id", type=int); p.add_argument("--out"); p.set_defaults(fn=cmd_wireguard)
     sub.add_parser("status").set_defaults(fn=cmd_status)
